@@ -1,5 +1,5 @@
 # PickByLight
-**PT. Apparel One Indonesia's warehouse management Pick-By-Light Project**
+**[PT. Apparel One Indonesia](http://aoi.co.id/v2/)'s warehouse management Pick-By-Light Project**
 
 ## PYTHON DEPENDECIES
 - `psycopg2-binary >= 2.7.5`
@@ -10,11 +10,11 @@
 - `PostgreSQL >= 9.5`
 
 ## HARDWARE (FOR LIGHT CONTROLS)
-- Autonics ARM Series modbus sensor connector type digital remote I/O
-- Menics MWE Series LED signal lights
+- [Autonics ARM Series modbus connector type digital remote I/O (ARM)](http://autonics.se/produkt/arm-series/)
+- [Menics MWE Series LED signal lights (MWE Lights)](http://www.autonics.se/produkt/mwe-series/)
 
 ## DESCRIPTION
-This is a specific project used in [**PT. Apparel One Indonesia**](http://aoi.co.id/v2/) as factory warehouse management tools, specifically on warehouse racking management. It uses [**Autonics ARM Series modbus connector type digital remote I/O (ARM)**](http://autonics.se/produkt/arm-series/) to drive the [**Menics MWE Series LED signal lights (MWE Lights)**](http://www.autonics.se/produkt/mwe-series/) as the racking lights.
+This is a specific project used in [**PT. Apparel One Indonesia**](http://aoi.co.id/v2/) as factory warehouse management tools, specifically on warehouse racking management. It uses **ARM** to drive the **MWE Lights** as the racking lights.
 
 ## SETTING UP SYSTEM (SERVER SIDE)
 1. Create a table in PostgreSQL. This table shall serve as the project's temporary lights-up-requests container.
