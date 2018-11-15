@@ -14,7 +14,7 @@
 - Menics MWE Series LED signal lights
 
 ## DESCRIPTION
-This is a specific project used in [**PT. Apparel One Indonesia**](http://aoi.co.id/v2/) as factory warehouse management tools, specifically on warehouse racking management. It uses [**Autonics ARM Series modbus connector type digital remote I/O](http://autonics.se/produkt/arm-series/) (ARM)** to drive the [**Menics MWE Series LED signal lights](http://www.autonics.se/produkt/mwe-series/) (MWE Lights)** as the racking lights.
+This is a specific project used in [**PT. Apparel One Indonesia**](http://aoi.co.id/v2/) as factory warehouse management tools, specifically on warehouse racking management. It uses [**Autonics ARM Series modbus connector type digital remote I/O (ARM)**](http://autonics.se/produkt/arm-series/) to drive the [**Menics MWE Series LED signal lights (MWE Lights)**](http://www.autonics.se/produkt/mwe-series/) as the racking lights.
 
 ## SETTING UP SYSTEM (SERVER SIDE)
 1. Create a table in PostgreSQL
