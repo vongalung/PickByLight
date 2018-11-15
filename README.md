@@ -1,15 +1,15 @@
 # PickByLight
 **PT. Apparel One Indonesia's warehouse management Pick-By-Light Project**
 
-# PYTHON DEPENDECIES
+## PYTHON DEPENDECIES
 - `psycopg2-binary >= 2.7.5`
 - `pyModbusTCP >= 0.1.8`
 
-# SYSTEM REQUIREMENTS
+## SYSTEM REQUIREMENTS
 - `Python >= 3.6`
 - `PostgreSQL >= 9.5`
 
-# HARDWARE (FOR LIGHT CONTROLS)
+## HARDWARE (FOR LIGHT CONTROLS)
 - Autonics ARM Series modbus sensor connector type digital remote I/O
 - Menics MWE Series LED signal lights
 
@@ -33,7 +33,7 @@ This is a specific project used in **PT. Apparel One Indonesia** as factory ware
 - You may also want to adjust your specific ARM configurations in `config/modbus.py` (e.g : the modbus devices addresses, the ARM pin mapping corresponding to the MWE Lights colors, etc.)
 
 ## HOW IT WORKS
-The program will lights-up the specific **MWE Lights** corresponding to the specific slots in the racks, based on a given request. These given requests shall be sent/inserted into a specific table in the **PostgreSQL** database (explained on the **SETTING UP SYSTEM (SERVER SIDE)** section above).
+The program will lights-up the specific **MWE Lights** corresponding to the specific slots in the racks, based on a given request. These given requests shall be sent/inserted into a specific table in the **PostgreSQL** database (explained on the [SETTING UP SYSTEM (SERVER SIDE)](https://github.com/vongalung/PickByLight#setting-up-system-server-side) section above).
 The function `modules.psql.psql_get.psql_get()` will then retrieve these requests. The program will then utilizes `threading` to handle each of these lights-up requests, which in turn will pass the requests to `modules.modbus.rack_modbus.execute()` to lights-up the **MWE Lights** one by one. The `modules.modbus.rack_modbus` script utilizes `pyModbusTCP.client.ModbusClient().write_multiple_registers()` so that it may handle multiple **MWE Lights** lights-up request in one go.
 
 ## CHANGELOG
