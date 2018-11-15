@@ -18,33 +18,20 @@ This is a specific project used in [**PT. Apparel One Indonesia**](http://aoi.co
 
 ## SETTING UP SYSTEM (SERVER SIDE)
 1. Create a table in PostgreSQL
-  
-  `
-  
-  CREATE TABLE rpi_request (
-  
+```
+CREATE TABLE rpi_request (
     req_id NUMERIC,
-    
     locators TEXT,
-    
     user_id NUMERIC,
-    
     req_time TIMESTAMP WITHOUT TIME ZONE DEFAULT NOW(),
-    
     CONSTRAINT rpi_request_pkey PRIMARY KEY (req_id)
-    
-  );
-  
-  `
-  
+ );
+ ```
   This table shall serve as the project's temporary lights-up-requests container.
-2. Set up your PostgreSQL configuration in `config/database.py`
-
-  `DB_HOST` : Specifies your server's address (DEFAULT : **'localhost'**)
-  
-  `DB_NAME` : Put the name of the previously created temporary table here (DEFAULT : **'rpi_request'**)
-  
-  `DB_PORT` : The server's PostgreSQL port (DEFAULT : **'5432'**)
+2. Set up your PostgreSQL configuration in `config/database.py` as follows:
+  - `DB_HOST` : Specifies your server's address (DEFAULT : **'localhost'**)
+  - `DB_NAME` : Put the name of the previously created temporary table here (DEFAULT : **'rpi_request'**)
+  - `DB_PORT` : The server's PostgreSQL port (DEFAULT : **'5432'**)
   
 3. You may also want to adjust your specific ARM configurations in `config/modbus.py` (e.g : the modbus devices addresses, the ARM pin mapping corresponding to the MWE Lights colors, etc.)
 
