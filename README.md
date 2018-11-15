@@ -18,8 +18,10 @@ This is a specific project used in [**PT. Apparel One Indonesia**](http://aoi.co
 
 ## SETTING UP SYSTEM (SERVER SIDE)
 1. Create a table in PostgreSQL
-
-  `CREATE TABLE rpi_request (
+  
+  `
+  
+  CREATE TABLE rpi_request (
   
     req_id NUMERIC,
     
@@ -31,7 +33,9 @@ This is a specific project used in [**PT. Apparel One Indonesia**](http://aoi.co
     
     CONSTRAINT rpi_request_pkey PRIMARY KEY (req_id)
     
-  );`
+  );
+  
+  `
   
   This table shall serve as the project's temporary lights-up-requests container.
 2. Set up your PostgreSQL configuration in `config/database.py`
