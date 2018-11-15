@@ -1,2 +1,2 @@
-# CONFIG PACKAGE
+# CONFIGURATIONS
 __all__ = ["config"]
