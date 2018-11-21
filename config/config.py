@@ -3,7 +3,7 @@ from os import path
 ROOT_DIR = path.abspath(path.join(path.dirname(__file__),'..'))
 
 # DATABASE TABLES
-REQ_TAB = 'rpi_request'
+REQ_TAB = 'rack_automations'
 
 # ERROR LOGGING
 ERROR_LOG_PATH = path.join(ROOT_DIR,'logs','error.log')
