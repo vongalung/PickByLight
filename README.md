@@ -37,7 +37,7 @@ This is a specific project used in [**PT. Apparel One Indonesia**](http://aoi.co
 3. You may also want to adjust your specific ARM configurations in `config/modbus.py` (e.g : the modbus devices addresses, the ARM pin mapping corresponding to the MWE Lights colors, etc.)
 
 ## HOW IT WORKS
-The program will lights-up the specific **MWE Lights** corresponding to the specific slots in the racks, based on a given request. These given requests shall be sent/inserted into table `rpi_request` in the **PostgreSQL** database.
+The program will lights-up the specific **MWE Lights** corresponding to the specific slots in the racks, based on a given request. These given requests shall be sent/inserted into table `rack_automations` in the **PostgreSQL** database.
 
 The function `modules.psql.psql_get.psql_get()` will then retrieve these requests. The program will then utilizes `threading` to handle each of these lights-up requests, which in turn will pass the requests to `modules.modbus.rack_modbus.execute()` to lights-up the **MWE Lights** one by one. The `modules.modbus.rack_modbus` script utilizes `pyModbusTCP.client.ModbusClient().write_multiple_registers()` so that it may handle multiple **MWE Lights** lights-up request in one go.
 
