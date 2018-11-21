@@ -28,7 +28,7 @@ while True:
         exit()
 
     except Exception as e: # if error, log them
-        error_log("""REQUEST : %s -> ERROR : %s\n""" % str(get),str(e))
+        error_log("""REQUEST : %s -> ERROR : %s\n""" % (str(get) if 'get' in locals() else '0',str(e)))
         exit()
 
     else:
