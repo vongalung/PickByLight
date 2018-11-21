@@ -7,8 +7,8 @@ class connection(object):
 	# a specified file in the same directory
 	# (or subdirectory) (default file='config')
 	def __init__(self):
-		from config.database import *
-		self.params(DB_NAME,DB_USER,DB_PASSWORD,DB_HOST,DB_PORT)
+		import config.database as db
+		self.params(db.DB_NAME,db.DB_USER,db.DB_PASSWORD,db.DB_HOST,db.DB_PORT)
 	
 	# define connection parameters
 	def params(self,dbname,username,password=None,host='localhost',port=5432):
