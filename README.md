@@ -42,6 +42,5 @@ The program will lights-up the specific **MWE Lights** corresponding to the spec
 The function `modules.psql.psql_get.psql_get()` will then retrieve these requests. The program will then utilizes `threading` to handle each of these lights-up requests, which in turn will pass the requests to `modules.modbus.rack_modbus.execute()` to lights-up the **MWE Lights** one by one. The `modules.modbus.rack_modbus` script utilizes `pyModbusTCP.client.ModbusClient().write_multiple_registers()` so that it may handle multiple **MWE Lights** lights-up request in one go.
 
 ## CHANGELOG
-- 2018-11-15 10:05 - Project created
-- 2018-11-21 12:31 - Adjusts the script configurations to mirror those applied during the actual project implementation
-- 2018-11-21 15:49 - Minor adjustment to exceptions handling in main.py
+- 2018-11-15 - Project created
+- 2018-11-21 - Adjusts the script configurations to mirror those applied during the actual project implementation; Minor adjustment to exceptions handling in main.py; and bug fixing

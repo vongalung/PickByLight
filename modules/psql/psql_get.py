@@ -1,7 +1,7 @@
-import psql_connection
+from modules.psql.psql_connection import connection
 from config.config import REQ_TAB
 
-conn=psql_connection.connection()
+conn=connection()
 
 # keep looping indefinitely until an input is found in rpi_request
 def psql_avail():
@@ -13,7 +13,7 @@ def psql_avail():
 # remove read request so that next requests may be executed.
 # in the event of duplicate requests, delete them along
 def psql_rem(req_id):
-    conn.delete(REQ_TAB,var='req_id',val=req_id)
+    conn.delete(REQ_TAB,var='id',val=("""\'%s\'""" % req_id))
 
 # get the first entry of REQ_TAB
 def psql_get():
