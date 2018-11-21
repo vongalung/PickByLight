@@ -43,4 +43,4 @@ The function `modules.psql.psql_get.psql_get()` will then retrieve these request
 
 ## CHANGELOG
 - Created at 2018-11-15 10:05
-- Adjusts the script configurations to mirror those applied during the actual project implementation
+- Adjusts the script configurations to mirror those applied during the actual project implementation at 2018-11-21 12:31
