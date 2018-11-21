@@ -14,8 +14,12 @@ SLEEP_TIME = 30 # in seconds
 
 # LAMP COLOR PICKER
 GROUP_COLOR_MAP = {
-	'ID1':'R',
-	'ID2':'B'
+	1:'R',
+	'1':'R',
+	2:'G',
+	'2':'G',
+	3:'B',
+	'3':'B'
 }
 def color_picker(group_id) :
 	if group_id in GROUP_COLOR_MAP :
