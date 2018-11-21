@@ -7,7 +7,7 @@ conn=psql_connection.connection()
 def psql_avail():
     dum=[]
     while (len(dum)==0):
-        dum=conn.select(REQ_TAB,column="req_id,locators,TRIM(user_id) as user_id",order="req_time ASC")
+        dum=conn.select(REQ_TAB,column="TRIM(id) as req_id,locator_name as locators,group_id as user_id",order="created_at ASC")
     return dum[0]
 
 # remove read request so that next requests may be executed.

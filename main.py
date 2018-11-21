@@ -2,7 +2,7 @@ from modules.psql.psql_get import psql_get
 from modules.modbus import rack_modbus
 from modules.misc.threadHandling import a_thread
 from modules.misc.errors import *
-from config.config import COLOR_PICKER,SLEEP_TIME
+from config.config import color_picker,SLEEP_TIME
 from time import sleep
 
 # TASK FOR THREADING
@@ -19,7 +19,7 @@ while True:
     try:
         get = psql_get() # capture the first occuring request
         thrd = a_thread() # create a thread
-        thrd.run_task(modbus_execute,get['locators'],COLOR_PICKER[get['user_id']])
+        thrd.run_task(modbus_execute,get['locators'],color_picker(get['user_id']))
         del(thrd,get) # cleaning up the used thread
         
     except KeyboardInterrupt:

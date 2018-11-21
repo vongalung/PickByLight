@@ -19,12 +19,14 @@ This is a specific project used in [**PT. Apparel One Indonesia**](http://aoi.co
 ## SETTING UP SYSTEM (SERVER SIDE)
 1. Create a table in **PostgreSQL**. This table shall serve as the project's temporary lights-up-requests container.
     ```
-    CREATE TABLE rpi_request (
-        req_id NUMERIC,
-        locators TEXT,
-        user_id NUMERIC,
-        req_time TIMESTAMP WITHOUT TIME ZONE DEFAULT NOW(),
-        CONSTRAINT rpi_request_pkey PRIMARY KEY (req_id)
+    CREATE TABLE rack_automations (
+        id character(36) NOT NULL,
+        locator_name text,
+        group_id integer NOT NULL DEFAULT 0,
+        created_at timestamp(0) without time zone,
+        updated_at timestamp(0) without time zone,
+        po_buyer character varying(255),
+        CONSTRAINT rack_automations_pkey PRIMARY KEY (id)
     );
     ```
   
@@ -41,3 +43,4 @@ The function `modules.psql.psql_get.psql_get()` will then retrieve these request
 
 ## CHANGELOG
 - Created at 2018-11-15 10:05
+- Adjusts the script configurations to mirror those applied during the actual project implementation at 2018-11-21 12:31
