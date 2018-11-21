@@ -13,8 +13,12 @@ ERROR_LOG_FORMAT = "%(asctime)-15s\n%(message)s"
 SLEEP_TIME = 30 # in seconds
 
 # LAMP COLOR PICKER
-COLOR_PICKER = {
+GROUP_COLOR_MAP = {
 	'ID1':'R',
 	'ID2':'B'
 }
-
+def color_picker(group_id) :
+	if group_id in GROUP_COLOR_MAP :
+		return GROUP_COLOR_MAP[group_id]
+	else :
+		return 'W'
