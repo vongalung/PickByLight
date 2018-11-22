@@ -49,3 +49,5 @@ The function `modules.psql.psql_get.psql_get()` will then retrieve these request
 - Minor adjustment to exceptions handling in main.py
 - Add linux shell script py_pbl.sh for service creation purposes
 - Bug fixing
+#### 2018-11-22
+- Add RegEx validation on locator list names
