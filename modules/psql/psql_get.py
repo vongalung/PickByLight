@@ -1,7 +1,9 @@
 from modules.psql.psql_connection import connection
-from config.config import REQ_TAB
+from config.config import REQ_TAB,LOCATION_REGEX
+import re
 
 conn=connection()
+rgx = re.compile(LOCATION_REGEX)
 
 # keep looping indefinitely until an input is found in rpi_request
 def psql_avail():
@@ -19,10 +21,12 @@ def psql_rem(req_id):
 def psql_get():
     row=psql_avail()
     psql_rem(row['req_id'])
-    row['locators'] = row['locators'].split(';')
-
-    return row # [req_id,list_of_locators,color]
-
+    if rgx.match(row['locators']) :
+		row['locators'] = row['locators'].split(';')
+		return row # [req_id,list_of_locators,color]
+	else :
+		return None
+    
 # FOR DEBUGGING PURPOSE ONLY
 if __name__ == '__main__':
     data = psql_get()
