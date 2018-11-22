@@ -50,4 +50,4 @@ The function `modules.psql.psql_get.psql_get()` will then retrieve these request
 - Add linux shell script py_pbl.sh for service creation purposes
 - Bug fixing
 #### 2018-11-22
-- Add regex validation on locator list names
+- Add RegEx validation on locator list names
