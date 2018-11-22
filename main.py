@@ -18,6 +18,8 @@ print(".")
 while True:
     try:
         get = psql_get() # capture the first occuring request
+	if get is None:
+		continue
         thrd = a_thread() # create a thread
         thrd.run_task(modbus_execute,get['locators'],color_picker(get['user_id']))
         del(thrd,get) # cleaning up the used thread
