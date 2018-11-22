@@ -2,8 +2,9 @@ from os import path
 # ROOT DIR
 ROOT_DIR = path.abspath(path.join(path.dirname(__file__),'..'))
 
-# DATABASE TABLES
+# DATABASE ACCESSING VARIABLES
 REQ_TAB = 'rack_automations'
+LOCATION_REGEX = """^((Z.){1}(\d)+(.){1}(\d)+)((;Z.){1}(\d)+(.){1}(\d)+)*$"""
 
 # ERROR LOGGING
 ERROR_LOG_PATH = path.join(ROOT_DIR,'logs','error.log')
