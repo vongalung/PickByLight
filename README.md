@@ -51,3 +51,5 @@ The function `modules.psql.psql_get.psql_get()` will then retrieve these request
 - Bug fixing
 #### 2018-11-22
 - Add RegEx validation on locator list names
+#### 2018-11-23
+- Bug fixing on modules.modbus.rack_modbus.execute()

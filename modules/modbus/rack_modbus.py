@@ -132,7 +132,7 @@ def execute(loc_list,color):
         dum=reg_add(modmap,color) # [0xXXXX,0xXXXX,0xXXXX]
         
         if conn_id[0] in reg_value:
-            if slv_id in reg_value[conn_id[0]]:
+            if slv_id in reg_value[conn_id[0]][1]:
                 # if entry for this ip and slv_id exists, add the value into it
                 for i in range(0,3):
                     reg_value[conn_id[0]][1][slv_id][i]+=dum[i]
