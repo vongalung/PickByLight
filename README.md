@@ -53,3 +53,5 @@ The function `modules.psql.psql_get.psql_get()` will then retrieve these request
 - Add RegEx validation on locator list names
 #### 2018-11-23
 - Bug fixing on modules.modbus.rack_modbus.execute()
+#### 2018-11-24
+- Rewriting py_pbl.sh from linux shell script into linux bash script. This is done in order to capture wider range of possible errors (especially OS/System related errors)
